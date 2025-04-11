@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --bg:orangered;
+    --text-color: #ffffff;
+    --primary-color: #00ffff;
+    --highlight-color: #ffd700;
+    --card: rgba(60, 60, 60,0.8);
+}
+
+body.light_mode{
+    --bg: #ffd700;
+    --text-color: #111;
+    --primary-color: #007acc;
+    --highlight-color: #ff6600;
+    --card: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    color : var(--highlight-color);
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.toggle-btn{
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    float: right;
+}
+
+.toggle-btn:hover {
+    background-color: var(--highlight-color);
+    color: #fff;
+}
+
+.container{
+    display: flex;
+    flex: column nowrap;
+    margin: 1rem;
+    padding: 1.875rem;
+    background-color: var(--card);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+img , .about , .tools {
+    padding: 1.875rem;
+}
+
+img{
+    border-radius: 30%;
+}
+
+.about{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1.9rem;
+}
+
+.about h2{
+    color: var(--highlight-color);
+}
+
+.tools{
+    text-align: center;
+    margin: 1rem;
+    padding: 1.875rem;
+    background-color: var(--card);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.tools h2 {
+    color: var(--highlight-color);
+}
+
+.tools span{
+    color: var(--primary-color);
+}
+
+.tools li {
+    list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+       display:flex; 
+       flex: row wrap;
+    }
+
+    img {
+        padding: 0;
+        border-radius: 10%;
+    }
+  }
+
