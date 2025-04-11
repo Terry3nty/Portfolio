@@ -13,7 +13,7 @@ body.light_mode{
     --text-color: #111;
     --primary-color: #007acc;
     --highlight-color: #ff6600;
-    --card: #ffffff;
+    --card: rgba(180, 180, 180,0.8);
 }
 
 *{
@@ -33,7 +33,7 @@ h1{
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     color : var(--highlight-color);
-    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .toggle-btn{
@@ -55,12 +55,13 @@ h1{
 
 .container{
     display: flex;
-    flex: column nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     margin: 1rem;
     padding: 1.875rem;
     background-color: var(--card);
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 img , .about , .tools {
@@ -87,7 +88,7 @@ img{
     padding: 1.875rem;
     background-color: var(--card);
     border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.9);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 1.5rem;
@@ -105,15 +106,52 @@ img{
     list-style: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .container {
-       display:flex; 
-       flex: row wrap;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .about {
+        font-size: 1.2rem;
+        padding: 1rem;
     }
 
     img {
-        padding: 0;
-        border-radius: 10%;
+        width: 80%;
+        height: auto;
+        border-radius: 20%;
     }
-  }
+
+    .tools {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+
+    .toggle-btn {
+        float: none;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about {
+        font-size: 1rem;
+    }
+
+    .tools {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .toggle-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
 
