@@ -73,9 +73,9 @@ img{
 }
 
 .about{
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    font-size: 1.9rem;
+    font-family:'Roboto';
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 .about h2{
@@ -94,6 +94,15 @@ img{
     font-size: 1.5rem;
 }
 
+.tools a{
+    text-decoration: none;
+    color:var(--text-color) ;
+}
+
+.tools a:hover{
+    color: var(--highlight-color);
+}
+
 .tools h2 {
     color: var(--highlight-color);
 }
@@ -104,6 +113,7 @@ img{
 
 .tools li {
     list-style: none;
+    margin-bottom: 0.7rem;
 }
 
 @media screen and (max-width: 768px) {
